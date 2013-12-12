@@ -2,7 +2,7 @@
 <!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
 <node CREATED="1386360810407" ID="ID_584569438" MODIFIED="1386364296611" TEXT="Ruby">
 <node CREATED="1386364116563" ID="ID_866595350" MODIFIED="1386364137506" POSITION="right" TEXT="Rails">
-<node CREATED="1386440542466" FOLDED="true" ID="ID_180274139" MODIFIED="1386702883410" TEXT="rails new FolderName">
+<node CREATED="1386440542466" ID="ID_180274139" MODIFIED="1386886315919" TEXT="rails new FolderName">
 <richcontent TYPE="NOTE"><html>
   <head>
     
@@ -12,12 +12,390 @@
       automatically runs the bundle install command, creates a skeleton Rails app in a directory of choice
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node CREATED="1386441421621" ID="ID_1389142458" MODIFIED="1386441631486" TEXT="app/        Core application (app) code, including models, views, controllers, and helpers">
 <font NAME="SansSerif" SIZE="12"/>
+<node COLOR="#e12222" CREATED="1386707910113" ID="ID_741302766" MODIFIED="1386886411125" TEXT="views/layouts">
+<node CREATED="1386884802245" FOLDED="true" ID="ID_24827436" MODIFIED="1386885311080" TEXT="application.html.erb">
+<node CREATED="1386885134135" ID="ID_1227647016" MODIFIED="1386885134135" TEXT="&lt;!DOCTYPE html&gt;"/>
+<node CREATED="1386885134139" ID="ID_266866035" MODIFIED="1386885134139">
+<richcontent TYPE="NODE"><html>
+  
+
+  <head>
+
+  </head>
+  <body>
+  </body>
+</html></richcontent>
+<node CREATED="1386885134143" MODIFIED="1386885134143" TEXT="&lt;head&gt;">
+<node CREATED="1386885134144" MODIFIED="1386885134144" TEXT="&lt;title&gt;&lt;%= full_title(yield(:title)) %&gt;&lt;/title&gt;"/>
+<node CREATED="1386885134144" ID="ID_719263529" MODIFIED="1386885299799" TEXT="&lt;%= stylesheet_link_tag &quot;application&quot;, media: &quot;all&quot;,">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      This code arranges to include the application stylesheet and JavaScript, which are part of the asset pipeline together with the Rails method csrf_meta_tags, which prevents cross-site request forgery (CSRF), a type of malicious web attack.
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      <font color="#35f016">this line calls the stylesheet_link_tag function with two arguments: a string, indicating the path to the stylesheet, and a hash with two elements, indicating the media type and telling Rails to use the turbolinks feature (new in Rails 4). Because of the &lt;%= %&gt; brackets, the results are inserted into the template by ERb, and if you view the source of the page in your browser you should see the HTML needed to include a stylesheet</font>
+    </p>
+  </body>
+</html></richcontent>
+<node CREATED="1386885134145" MODIFIED="1386885134145" TEXT="&quot;data-turbolinks-track&quot; =&gt; true %&gt;"/>
 </node>
-<node CREATED="1386441421624" ID="ID_1215897084" MODIFIED="1386441421624" TEXT="app/assets        Applications assets such as cascading style sheets (CSS), JavaScript files, and images"/>
+<node CREATED="1386885134145" ID="ID_930391070" MODIFIED="1386885303596" TEXT="&lt;%= javascript_include_tag &quot;application&quot;, &quot;data-turbolinks-track&quot; =&gt; true %&gt;">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      This code arranges to include the application stylesheet and JavaScript, which are part of the asset pipeline together with the Rails method csrf_meta_tags, which prevents cross-site request forgery (CSRF), a type of malicious web attack
+    </p>
+  </body>
+</html></richcontent>
+</node>
+<node CREATED="1386885134146" ID="ID_1290682233" MODIFIED="1386885308792" TEXT="&lt;%= csrf_meta_tags %&gt;">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      This code arranges to include the application stylesheet and JavaScript, which are part of the asset pipeline together with the Rails method csrf_meta_tags, which prevents cross-site request forgery (CSRF), a type of malicious web attack
+    </p>
+  </body>
+</html></richcontent>
+</node>
+<node CREATED="1386885134146" MODIFIED="1386885134146" TEXT="&lt;%= render &apos;layouts/shim&apos; %&gt;"/>
+</node>
+<node CREATED="1386885134147" MODIFIED="1386885134147" TEXT="&lt;/head&gt;"/>
+<node CREATED="1386885134147" MODIFIED="1386885134147" TEXT="&lt;body&gt;">
+<node CREATED="1386885134148" ID="ID_729414989" MODIFIED="1386885134148" TEXT="&lt;%= render &apos;layouts/header&apos; %&gt;"/>
+<node CREATED="1386885134148" ID="ID_1947705401" MODIFIED="1386885134148" TEXT="&lt;div class=&quot;container&quot;&gt;">
+<node CREATED="1386885134149" MODIFIED="1386885134149" TEXT="&lt;%= yield %&gt;"/>
+<node CREATED="1386885134149" MODIFIED="1386885134149" TEXT="&lt;%= render &apos;layouts/footer&apos; %&gt;"/>
+<node CREATED="1386885134150" MODIFIED="1386885134150" TEXT="&lt;%= debug(params) if Rails.env.development? %&gt;"/>
+</node>
+<node CREATED="1386885134150" MODIFIED="1386885134150" TEXT="&lt;/div&gt;"/>
+</node>
+<node CREATED="1386885134151" ID="ID_451306243" MODIFIED="1386885134151" TEXT="&lt;/body&gt;"/>
+</node>
+<node CREATED="1386885134151" ID="ID_1670195441" MODIFIED="1386885134151" TEXT="&lt;/html&gt;"/>
+</node>
+<node CREATED="1386885170132" FOLDED="true" ID="ID_398003940" MODIFIED="1386886413902" TEXT="_footer.html.erb">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      partial created
+    </p>
+  </body>
+</html></richcontent>
+<node CREATED="1386885330149" ID="ID_1892955928" MODIFIED="1386885330149" TEXT="&lt;footer class=&quot;footer&quot;&gt;">
+<node CREATED="1386885330150" MODIFIED="1386885330150" TEXT="&lt;small&gt;">
+<node CREATED="1386885330151" LINK="http://railstutorial.org/" MODIFIED="1386885330151" TEXT="&lt;a href=&quot;http://railstutorial.org/&quot;&gt;Rails Tutorial&lt;/a&gt;"/>
+<node CREATED="1386885330152" MODIFIED="1386885330152" TEXT="by Michael Hartl"/>
+</node>
+<node CREATED="1386885330153" MODIFIED="1386885330153" TEXT="&lt;/small&gt;"/>
+<node CREATED="1386885330153" MODIFIED="1386885330153" TEXT="&lt;nav&gt;">
+<node CREATED="1386885330154" MODIFIED="1386885330154" TEXT="&lt;ul&gt;">
+<node CREATED="1386885330154" ID="ID_1545078233" MODIFIED="1386885550617" TEXT="&lt;li&gt;&lt;%= link_to &quot;About&quot;,   about_path %&gt;&lt;/li&gt;">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      This uses the Rails helper link_to to create links (which we created directly with the anchor tag a.)
+    </p>
+  </body>
+</html></richcontent>
+</node>
+<node CREATED="1386885330155" MODIFIED="1386885330155" TEXT="&lt;li&gt;&lt;%= link_to &quot;Contact&quot;, contact_path %&gt;&lt;/li&gt;"/>
+<node CREATED="1386885330155" LINK="http://news.railstutorial.org/" MODIFIED="1386885330155" TEXT="&lt;li&gt;&lt;a href=&quot;http://news.railstutorial.org/&quot;&gt;News&lt;/a&gt;&lt;/li&gt;"/>
+</node>
+<node CREATED="1386885330156" MODIFIED="1386885330156" TEXT="&lt;/ul&gt;"/>
+</node>
+<node CREATED="1386885330156" MODIFIED="1386885330156" TEXT="&lt;/nav&gt;"/>
+</node>
+<node CREATED="1386885330157" ID="ID_728403290" MODIFIED="1386885330157" TEXT="&lt;/footer&gt;"/>
+</node>
+<node CREATED="1386885189012" FOLDED="true" ID="ID_1291212181" MODIFIED="1386886416656" TEXT="_header.html.erb">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      partial created
+    </p>
+  </body>
+</html></richcontent>
+<node CREATED="1386885345615" ID="ID_4897039" MODIFIED="1386885345615" TEXT="&lt;header class=&quot;navbar navbar-fixed-top navbar-inverse&quot;&gt;">
+<node CREATED="1386885345617" MODIFIED="1386885345617" TEXT="&lt;div class=&quot;navbar-inner&quot;&gt;">
+<node CREATED="1386885345618" MODIFIED="1386885345618" TEXT="&lt;div class=&quot;container&quot;&gt;">
+<node CREATED="1386885345619" MODIFIED="1386885345619" TEXT="&lt;%= link_to &quot;sample app&quot;, &apos;#&apos;, id: &quot;logo&quot; %&gt;"/>
+<node CREATED="1386885345620" MODIFIED="1386885345620" TEXT="&lt;nav&gt;">
+<node CREATED="1386885345620" MODIFIED="1386885345620" TEXT="&lt;ul class=&quot;nav pull-right&quot;&gt;">
+<node CREATED="1386885345621" ID="ID_434107057" MODIFIED="1386885524413" TEXT="&lt;li&gt;&lt;%= link_to &quot;Home&quot;,    root_path %&gt;&lt;/li&gt;">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      This uses the Rails helper link_to to create links (which we created directly with the anchor tag a.
+    </p>
+  </body>
+</html></richcontent>
+</node>
+<node CREATED="1386885345621" MODIFIED="1386885345621" TEXT="&lt;li&gt;&lt;%= link_to &quot;Help&quot;,    help_path %&gt;&lt;/li&gt;"/>
+<node CREATED="1386885345622" MODIFIED="1386885345622" TEXT="&lt;li&gt;&lt;%= link_to &quot;Sign in&quot;, &apos;#&apos; %&gt;&lt;/li&gt;"/>
+</node>
+<node CREATED="1386885345622" MODIFIED="1386885345622" TEXT="&lt;/ul&gt;"/>
+</node>
+<node CREATED="1386885345623" MODIFIED="1386885345623" TEXT="&lt;/nav&gt;"/>
+</node>
+<node CREATED="1386885345623" MODIFIED="1386885345623" TEXT="&lt;/div&gt;"/>
+</node>
+<node CREATED="1386885345624" MODIFIED="1386885345624" TEXT="&lt;/div&gt;"/>
+</node>
+<node CREATED="1386885345624" ID="ID_109379208" MODIFIED="1386885345624" TEXT="&lt;/header&gt;"/>
+</node>
+<node CREATED="1386885211366" FOLDED="true" ID="ID_686338111" MODIFIED="1386886419695" TEXT="_shim.html.erb">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      partial created
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      Rails 4 uses HTML5 by default (as indicated by the doctype &lt;!DOCTYPE html&gt;); since the HTML5 standard is relatively new, some browsers (especially older versions Internet Explorer) don&#8217;t fully support it, so we include some JavaScript code (known as an &#8220;HTML5 shim&#8221;) to work around the issue:
+    </p>
+    <p>
+      The somewhat odd syntax
+    </p>
+    <p>
+      <b>&lt;!--[if lt IE 9]&gt;</b>
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      includes the enclosed line only if the version of Microsoft Internet Explorer (IE) is less than 9 (if lt IE 9). The weird [if lt IE 9] syntax is not part of Rails; it&#8217;s actually a conditional comment supported by Internet Explorer browsers for just this sort of situation. It&#8217;s a good thing, too, because it means we can include the HTML5 shim only for IE browsers less than version 9, leaving other browsers such as Firefox, Chrome, and Safari unaffected.
+    </p>
+  </body>
+</html></richcontent>
+<node CREATED="1386885365912" ID="ID_487803761" MODIFIED="1386885365912" TEXT="&lt;!--[if lt IE 9]&gt;"/>
+<node CREATED="1386885365913" ID="ID_982044767" LINK="http://html5shim.googlecode.com/svn/trunk/html5.js" MODIFIED="1386885365913" TEXT="&lt;script src=&quot;http://html5shim.googlecode.com/svn/trunk/html5.js&quot;&gt;&lt;/script&gt;"/>
+<node CREATED="1386885365914" ID="ID_602913921" MODIFIED="1386885365914" TEXT="&lt;![endif]--&gt;"/>
+</node>
+</node>
+</node>
+<node CREATED="1386441421624" ID="ID_1215897084" MODIFIED="1386883410884" TEXT="app/assets        Applications assets (cascading style sheets (CSS), JavaScript files &amp; images)">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      The asset pipeline: Any stylesheets in this directory will automatically be included as part of the application.css file included in the site layout.
+    </p>
+  </body>
+</html>
+</richcontent>
+<node CREATED="1386883344110" FOLDED="true" ID="ID_771087176" MODIFIED="1386886394033" TEXT="stylesheets">
+<node CREATED="1386883372324" FOLDED="true" ID="ID_962621415" MODIFIED="1386884134956" TEXT="custom.css.scss">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      This a file manually created and <font color="#cc1616"><b>it is used for stylyng the layout and each individual page.</b></font>&#160;The filename custom.css.scss includes the .css extension, which indicates a CSS file, and the .scss extension, which indicates a &#8220;Sassy CSS&#8221; file and arranges for the asset pipeline to process the file using Sass.
+    </p>
+  </body>
+</html>
+</richcontent>
+<node CREATED="1386883936504" ID="ID_1632828914" MODIFIED="1386883936504" TEXT="@import &quot;bootstrap&quot;;"/>
+<node CREATED="1386883936505" ID="ID_880045104" MODIFIED="1386883936505" TEXT="/* mixins, variables, etc. */"/>
+<node CREATED="1386883936506" ID="ID_1576203186" MODIFIED="1386883936506" TEXT="$grayMediumLight: #eaeaea;"/>
+<node CREATED="1386883936506" ID="ID_1204783415" MODIFIED="1386883936506" TEXT="@mixin box_sizing {">
+<node CREATED="1386883936507" MODIFIED="1386883936507" TEXT="-moz-box-sizing: border-box;"/>
+<node CREATED="1386883936508" MODIFIED="1386883936508" TEXT="-webkit-box-sizing: border-box;"/>
+<node CREATED="1386883936508" MODIFIED="1386883936508" TEXT="box-sizing: border-box;"/>
+</node>
+<node CREATED="1386883936509" ID="ID_1668491703" MODIFIED="1386883936509" TEXT="}"/>
+<node CREATED="1386883936509" ID="ID_1425803324" MODIFIED="1386883936509" TEXT="/* universal */"/>
+<node CREATED="1386883936510" ID="ID_522624099" MODIFIED="1386883936510" TEXT="html {">
+<node CREATED="1386883936510" MODIFIED="1386883936510" TEXT="overflow-y: scroll;"/>
+</node>
+<node CREATED="1386883936511" ID="ID_97240995" MODIFIED="1386883936511" TEXT="}"/>
+<node CREATED="1386883936511" ID="ID_1968538114" MODIFIED="1386883936511" TEXT="body {">
+<node CREATED="1386883936512" MODIFIED="1386883936512" TEXT="padding-top: 60px;"/>
+</node>
+<node CREATED="1386883936512" ID="ID_1954986041" MODIFIED="1386883936512" TEXT="}"/>
+<node CREATED="1386883936513" ID="ID_1074914357" MODIFIED="1386883936513" TEXT="section {">
+<node CREATED="1386883936513" MODIFIED="1386883936513" TEXT="overflow: auto;"/>
+</node>
+<node CREATED="1386883936514" ID="ID_703183552" MODIFIED="1386883936514" TEXT="}"/>
+<node CREATED="1386883936514" ID="ID_634417483" MODIFIED="1386883936514" TEXT="textarea {">
+<node CREATED="1386883936515" MODIFIED="1386883936515" TEXT="resize: vertical;"/>
+</node>
+<node CREATED="1386883936515" ID="ID_1454413683" MODIFIED="1386883936515" TEXT="}"/>
+<node CREATED="1386883936516" ID="ID_945962459" MODIFIED="1386883936516" TEXT=".center {">
+<node CREATED="1386883936516" MODIFIED="1386883936516" TEXT="text-align: center;"/>
+<node CREATED="1386883936517" MODIFIED="1386883936517" TEXT="h1 {">
+<node CREATED="1386883936517" MODIFIED="1386883936517" TEXT="margin-bottom: 10px;"/>
+</node>
+<node CREATED="1386883936518" MODIFIED="1386883936518" TEXT="}"/>
+</node>
+<node CREATED="1386883936518" ID="ID_302347060" MODIFIED="1386883936518" TEXT="}"/>
+<node CREATED="1386883936519" ID="ID_455119300" MODIFIED="1386883936519" TEXT="/* typography */"/>
+<node CREATED="1386883936519" ID="ID_107789859" MODIFIED="1386883936519" TEXT="h1, h2, h3, h4, h5, h6 {">
+<node CREATED="1386883936520" MODIFIED="1386883936520" TEXT="line-height: 1;"/>
+</node>
+<node CREATED="1386883936520" ID="ID_1618545562" MODIFIED="1386883936520" TEXT="}"/>
+<node CREATED="1386883936521" ID="ID_1345200082" MODIFIED="1386883936521" TEXT="h1 {">
+<node CREATED="1386883936521" MODIFIED="1386883936521" TEXT="font-size: 3em;"/>
+<node CREATED="1386883936522" MODIFIED="1386883936522" TEXT="letter-spacing: -2px;"/>
+<node CREATED="1386883936522" MODIFIED="1386883936522" TEXT="margin-bottom: 30px;"/>
+<node CREATED="1386883936523" MODIFIED="1386883936523" TEXT="text-align: center;"/>
+</node>
+<node CREATED="1386883936523" ID="ID_980769899" MODIFIED="1386883936523" TEXT="}"/>
+<node CREATED="1386883936524" ID="ID_332812758" MODIFIED="1386883936524" TEXT="h2 {">
+<node CREATED="1386883936524" MODIFIED="1386883936524" TEXT="font-size: 1.2em;"/>
+<node CREATED="1386883936525" MODIFIED="1386883936525" TEXT="letter-spacing: -1px;"/>
+<node CREATED="1386883936525" MODIFIED="1386883936525" TEXT="margin-bottom: 30px;"/>
+<node CREATED="1386883936526" MODIFIED="1386883936526" TEXT="text-align: center;"/>
+<node CREATED="1386883936526" MODIFIED="1386883936526" TEXT="font-weight: normal;"/>
+<node CREATED="1386883936527" MODIFIED="1386883936527" TEXT="color: $grayLight;"/>
+</node>
+<node CREATED="1386883936527" ID="ID_794461381" MODIFIED="1386883936527" TEXT="}"/>
+<node CREATED="1386883936528" ID="ID_1286158408" MODIFIED="1386883936528" TEXT="p {">
+<node CREATED="1386883936528" MODIFIED="1386883936528" TEXT="font-size: 1.1em;"/>
+<node CREATED="1386883936529" MODIFIED="1386883936529" TEXT="line-height: 1.7em;"/>
+</node>
+<node CREATED="1386883936529" ID="ID_715384736" MODIFIED="1386883936529" TEXT="}"/>
+<node CREATED="1386883936530" ID="ID_1967199073" MODIFIED="1386883936530" TEXT="/* header */"/>
+<node CREATED="1386883936530" ID="ID_962668183" MODIFIED="1386883936530" TEXT="#logo {">
+<node CREATED="1386883936531" MODIFIED="1386883936531" TEXT="float: left;"/>
+<node CREATED="1386883936531" MODIFIED="1386883936531" TEXT="margin-right: 10px;"/>
+<node CREATED="1386883936532" MODIFIED="1386883936532" TEXT="font-size: 1.7em;"/>
+<node CREATED="1386883936532" MODIFIED="1386883936532" TEXT="color: white;"/>
+<node CREATED="1386883936533" MODIFIED="1386883936533" TEXT="text-transform: uppercase;"/>
+<node CREATED="1386883936533" MODIFIED="1386883936533" TEXT="letter-spacing: -1px;"/>
+<node CREATED="1386883936534" MODIFIED="1386883936534" TEXT="padding-top: 9px;"/>
+<node CREATED="1386883936534" MODIFIED="1386883936534" TEXT="font-weight: bold;"/>
+<node CREATED="1386883936535" MODIFIED="1386883936535" TEXT="line-height: 1;"/>
+<node CREATED="1386883936535" MODIFIED="1386883936535" TEXT="&amp;:hover {">
+<node CREATED="1386883936536" MODIFIED="1386883936536" TEXT="color: white;"/>
+<node CREATED="1386883936536" MODIFIED="1386883936536" TEXT="text-decoration: none;"/>
+</node>
+<node CREATED="1386883936537" MODIFIED="1386883936537" TEXT="}"/>
+</node>
+<node CREATED="1386883936537" ID="ID_293072514" MODIFIED="1386883936537" TEXT="}"/>
+<node CREATED="1386883936538" ID="ID_493199437" MODIFIED="1386883936538" TEXT="/* footer */"/>
+<node CREATED="1386883936538" ID="ID_1490714046" MODIFIED="1386883936538" TEXT="footer {">
+<node CREATED="1386883936539" MODIFIED="1386883936539" TEXT="margin-top: 45px;"/>
+<node CREATED="1386883936539" MODIFIED="1386883936539" TEXT="padding-top: 5px;"/>
+<node CREATED="1386883936540" MODIFIED="1386883936540" TEXT="border-top: 1px solid $grayMediumLight;"/>
+<node CREATED="1386883936540" MODIFIED="1386883936540" TEXT="color: $grayLight;"/>
+<node CREATED="1386883936541" MODIFIED="1386883936541" TEXT="a {">
+<node CREATED="1386883936541" MODIFIED="1386883936541" TEXT="color: $gray;"/>
+<node CREATED="1386883936542" MODIFIED="1386883936542" TEXT="&amp;:hover {">
+<node CREATED="1386883936542" MODIFIED="1386883936542" TEXT="color: $grayDarker;"/>
+</node>
+<node CREATED="1386883936543" MODIFIED="1386883936543" TEXT="}"/>
+</node>
+<node CREATED="1386883936543" MODIFIED="1386883936543" TEXT="}"/>
+<node CREATED="1386883936544" MODIFIED="1386883936544" TEXT="small {">
+<node CREATED="1386883936544" MODIFIED="1386883936544" TEXT="float: left;"/>
+</node>
+<node CREATED="1386883936545" MODIFIED="1386883936545" TEXT="}"/>
+<node CREATED="1386883936545" MODIFIED="1386883936545" TEXT="ul {">
+<node CREATED="1386883936546" MODIFIED="1386883936546" TEXT="float: right;"/>
+<node CREATED="1386883936546" MODIFIED="1386883936546" TEXT="list-style: none;"/>
+<node CREATED="1386883936547" MODIFIED="1386883936547" TEXT="li {">
+<node CREATED="1386883936547" MODIFIED="1386883936547" TEXT="float: left;"/>
+<node CREATED="1386883936548" MODIFIED="1386883936548" TEXT="margin-left: 10px;"/>
+</node>
+<node CREATED="1386883936548" MODIFIED="1386883936548" TEXT="}"/>
+</node>
+<node CREATED="1386883936549" MODIFIED="1386883936549" TEXT="}"/>
+</node>
+<node CREATED="1386883936549" ID="ID_28929683" MODIFIED="1386883936549" TEXT="}"/>
+<node CREATED="1386883936550" ID="ID_1643795224" MODIFIED="1386883936550" TEXT="/* miscellaneous */"/>
+<node CREATED="1386883936550" ID="ID_408217442" MODIFIED="1386883936550" TEXT=".debug_dump {">
+<node CREATED="1386883936551" MODIFIED="1386883936551" TEXT="clear: both;"/>
+<node CREATED="1386883936551" MODIFIED="1386883936551" TEXT="float: left;"/>
+<node CREATED="1386883936552" MODIFIED="1386883936552" TEXT="width: 100%;"/>
+<node CREATED="1386883936552" MODIFIED="1386883936552" TEXT="margin-top: 45px;"/>
+<node CREATED="1386883936553" MODIFIED="1386883936553" TEXT="@include box_sizing;"/>
+</node>
+<node CREATED="1386883936553" ID="ID_813177286" MODIFIED="1386883936553" TEXT="}"/>
+<node CREATED="1386883936554" ID="ID_74994289" MODIFIED="1386883936554" TEXT="/* sidebar */"/>
+<node CREATED="1386883936554" ID="ID_771006451" MODIFIED="1386883936554" TEXT="aside {">
+<node CREATED="1386883936555" MODIFIED="1386883936555" TEXT="section {">
+<node CREATED="1386883936556" MODIFIED="1386883936556" TEXT="padding: 10px 0;"/>
+<node CREATED="1386883936556" MODIFIED="1386883936556" TEXT="border-top: 1px solid $grayLighter;"/>
+<node CREATED="1386883936557" MODIFIED="1386883936557" TEXT="&amp;:first-child {">
+<node CREATED="1386883936557" MODIFIED="1386883936557" TEXT="border: 0;"/>
+<node CREATED="1386883936558" MODIFIED="1386883936558" TEXT="padding-top: 0;"/>
+</node>
+<node CREATED="1386883936559" MODIFIED="1386883936559" TEXT="}"/>
+<node CREATED="1386883936559" MODIFIED="1386883936559" TEXT="span {">
+<node CREATED="1386883936560" MODIFIED="1386883936560" TEXT="display: block;"/>
+<node CREATED="1386883936560" MODIFIED="1386883936560" TEXT="margin-bottom: 3px;"/>
+<node CREATED="1386883936561" MODIFIED="1386883936561" TEXT="line-height: 1;"/>
+</node>
+<node CREATED="1386883936562" MODIFIED="1386883936562" TEXT="}"/>
+<node CREATED="1386883936562" MODIFIED="1386883936562" TEXT="h1 {">
+<node CREATED="1386883936563" MODIFIED="1386883936563" TEXT="font-size: 1.4em;"/>
+<node CREATED="1386883936563" MODIFIED="1386883936563" TEXT="text-align: left;"/>
+<node CREATED="1386883936564" MODIFIED="1386883936564" TEXT="letter-spacing: -1px;"/>
+<node CREATED="1386883936564" MODIFIED="1386883936564" TEXT="margin-bottom: 3px;"/>
+<node CREATED="1386883936565" MODIFIED="1386883936565" TEXT="margin-top: 0px;"/>
+</node>
+<node CREATED="1386883936566" MODIFIED="1386883936566" TEXT="}"/>
+</node>
+<node CREATED="1386883936566" MODIFIED="1386883936566" TEXT="}"/>
+</node>
+<node CREATED="1386883936567" ID="ID_449907874" MODIFIED="1386883936567" TEXT="}"/>
+<node CREATED="1386883936567" ID="ID_1299401481" MODIFIED="1386883936567" TEXT=".gravatar {">
+<node CREATED="1386883936568" MODIFIED="1386883936568" TEXT="float: left;"/>
+<node CREATED="1386883936569" MODIFIED="1386883936569" TEXT="margin-right: 10px;"/>
+</node>
+<node CREATED="1386883936569" ID="ID_1654149177" MODIFIED="1386883936569" TEXT="}"/>
+<node CREATED="1386883936570" ID="ID_563300145" MODIFIED="1386883936570" TEXT="/* forms */"/>
+<node CREATED="1386883936570" ID="ID_1732700034" MODIFIED="1386883936570" TEXT="input, textarea, select, .uneditable-input {">
+<node CREATED="1386883936571" MODIFIED="1386883936571" TEXT="border: 1px solid #bbb;"/>
+<node CREATED="1386883936572" MODIFIED="1386883936572" TEXT="width: 100%;"/>
+<node CREATED="1386883936572" MODIFIED="1386883936572" TEXT="margin-bottom: 15px;"/>
+<node CREATED="1386883936573" MODIFIED="1386883936573" TEXT="@include box_sizing;"/>
+</node>
+<node CREATED="1386883936573" ID="ID_87966532" MODIFIED="1386883936573" TEXT="}"/>
+<node CREATED="1386883936574" ID="ID_1280076026" MODIFIED="1386883936574" TEXT="input {">
+<node CREATED="1386883936574" MODIFIED="1386883936574" TEXT="height: auto !important;"/>
+</node>
+<node CREATED="1386883936575" ID="ID_564952864" MODIFIED="1386883936575" TEXT="}"/>
+</node>
+</node>
+</node>
 <node CREATED="1386441421629" ID="ID_1591688983" MODIFIED="1386441421629" TEXT="bin/        Binary executable files"/>
 <node CREATED="1386441421630" ID="ID_604775714" MODIFIED="1386441421630" TEXT="config/        Application configuration">
 <node CREATED="1386699434554" ID="ID_781026392" MODIFIED="1386699445147" TEXT="initializers">
@@ -49,8 +427,7 @@
       # You can use `rake secret` to generate a secure secret key.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node CREATED="1386699556646" ID="ID_1339127120" MODIFIED="1386699556646" TEXT="require &apos;securerandom&apos;"/>
 <node CREATED="1386699556647" ID="ID_360149740" MODIFIED="1386699556647" TEXT="def secure_token">
 <node CREATED="1386699556648" MODIFIED="1386699556648" TEXT="token_file = Rails.root.join(&apos;.secret&apos;)"/>
@@ -84,13 +461,77 @@
 <node CREATED="1386441421650" ID="ID_1205802690" MODIFIED="1386441421650" TEXT="vendor/assets        Third-party assets such as cascading style sheets (CSS), JavaScript files, and images"/>
 <node CREATED="1386441421655" ID="ID_71257800" MODIFIED="1386441421655" TEXT="README.rdoc        A brief description of the application"/>
 <node CREATED="1386441421656" ID="ID_1787293158" MODIFIED="1386441421656" TEXT="Rakefile        Utility tasks available via the rake command"/>
-<node CREATED="1386441421657" ID="ID_160320410" MODIFIED="1386519427963" TEXT="Gemfile        Gem requirements for this app">
-<node CREATED="1386443132518" ID="ID_62489593" MODIFIED="1386443183460" TEXT="bundle update">
-<font BOLD="true" NAME="SansSerif" SIZE="12"/>
+<node CREATED="1386441421657" FOLDED="true" ID="ID_160320410" MODIFIED="1386883160194" TEXT="Gemfile        Gem requirements for this app">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      <font face="SansSerif, sans-serif"><b>bundle update</b></font>
+    </p>
+    <p>
+      <span style="font-family: SansSerif, sans-serif; font-weight: bold"><font face="SansSerif, sans-serif"><b>bundle install</b></font></span>
+    </p>
+  </body>
+</html>
+</richcontent>
+<node CREATED="1386880950760" ID="ID_1370787389" LINK="https://rubygems.org" MODIFIED="1386880950760" TEXT="source &apos;https://rubygems.org&apos;"/>
+<node CREATED="1386880950762" ID="ID_617925812" MODIFIED="1386880950762" TEXT="ruby &apos;2.0.0&apos;"/>
+<node CREATED="1386880950762" ID="ID_1694840350" MODIFIED="1386880950762" TEXT="#ruby-gemset=railstutorial_rails_4_0"/>
+<node CREATED="1386880950763" ID="ID_763438911" MODIFIED="1386880950763" TEXT="gem &apos;rails&apos;, &apos;4.0.1&apos;"/>
+<node CREATED="1386880950764" ID="ID_824448427" LINK="http://lesscss.org/" MODIFIED="1386881213014" TEXT="gem &apos;bootstrap-sass&apos;, &apos;2.3.2.0&apos;">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      to include the Bootstrapframework which natively uses the LESS CSS language for making dynamic stylesheets, but the Rails asset pipeline supports the (very similar) Sass language by default (Section 5.2), so bootstrap-sass converts LESS to Sass and makes all the necessary Bootstrap files available to the current application.5
+    </p>
+  </body>
+</html>
+</richcontent>
 </node>
-<node CREATED="1386443132519" ID="ID_1322193035" MODIFIED="1386443149539" TEXT="bundle install">
-<font BOLD="true" NAME="SansSerif" SIZE="12"/>
+<node CREATED="1386880950764" ID="ID_1967936216" MODIFIED="1386880950764" TEXT="gem &apos;bcrypt-ruby&apos;, &apos;3.1.2&apos;"/>
+<node CREATED="1386880950765" ID="ID_914386053" MODIFIED="1386880950765" TEXT="group :development, :test do">
+<node CREATED="1386880950766" MODIFIED="1386880950766" TEXT="gem &apos;sqlite3&apos;, &apos;1.3.8&apos;"/>
+<node CREATED="1386880950766" MODIFIED="1386880950766" TEXT="gem &apos;rspec-rails&apos;, &apos;2.13.1&apos;"/>
+<node CREATED="1386880950767" MODIFIED="1386880950767" TEXT="gem &apos;guard-rspec&apos;, &apos;2.5.0&apos;"/>
+<node CREATED="1386880950767" MODIFIED="1386880950767" TEXT="gem &apos;spork-rails&apos;, &apos;4.0.0&apos;"/>
+<node CREATED="1386880950768" ID="ID_1463292846" MODIFIED="1386880950768" TEXT="gem &apos;guard-spork&apos;, &apos;1.5.0&apos;"/>
+<node CREATED="1386880950768" MODIFIED="1386880950768" TEXT="gem &apos;childprocess&apos;, &apos;0.3.6&apos;"/>
 </node>
+<node CREATED="1386880950769" ID="ID_563572464" MODIFIED="1386880950769" TEXT="end"/>
+<node CREATED="1386880950769" ID="ID_1416218834" MODIFIED="1386880950769" TEXT="group :test do">
+<node CREATED="1386880950770" MODIFIED="1386880950770" TEXT="gem &apos;selenium-webdriver&apos;, &apos;2.35.1&apos;"/>
+<node CREATED="1386880950770" MODIFIED="1386880950770" TEXT="gem &apos;capybara&apos;, &apos;2.1.0&apos;"/>
+<node CREATED="1386880950771" MODIFIED="1386880950771" TEXT="gem &apos;factory_girl_rails&apos;, &apos;4.2.1&apos;"/>
+<node CREATED="1386880950771" MODIFIED="1386880950771" TEXT="# Uncomment this line on OS X."/>
+<node CREATED="1386880950772" MODIFIED="1386880950772" TEXT="# gem &apos;growl&apos;, &apos;1.0.3&apos;"/>
+<node CREATED="1386880950772" MODIFIED="1386880950772" TEXT="# Uncomment these lines on Linux."/>
+<node CREATED="1386880950773" MODIFIED="1386880950773" TEXT="gem &apos;libnotify&apos;, &apos;0.8.0&apos;"/>
+<node CREATED="1386880950774" MODIFIED="1386880950774" TEXT="# Uncomment these lines on Windows."/>
+<node CREATED="1386880950774" MODIFIED="1386880950774" TEXT="# gem &apos;rb-notifu&apos;, &apos;0.0.4&apos;"/>
+<node CREATED="1386880950775" MODIFIED="1386880950775" TEXT="# gem &apos;win32console&apos;, &apos;1.3.2&apos;"/>
+<node CREATED="1386880950775" MODIFIED="1386880950775" TEXT="# gem &apos;wdm&apos;, &apos;0.1.0&apos;"/>
+</node>
+<node CREATED="1386880950776" ID="ID_186952059" MODIFIED="1386880950776" TEXT="end"/>
+<node CREATED="1386880950776" ID="ID_1238891685" MODIFIED="1386880950776" TEXT="gem &apos;sass-rails&apos;, &apos;4.0.1&apos;"/>
+<node CREATED="1386880950777" ID="ID_1657136952" MODIFIED="1386880950777" TEXT="gem &apos;uglifier&apos;, &apos;2.1.1&apos;"/>
+<node CREATED="1386880950777" ID="ID_1203933184" MODIFIED="1386880950777" TEXT="gem &apos;coffee-rails&apos;, &apos;4.0.1&apos;"/>
+<node CREATED="1386880950778" ID="ID_1148773063" MODIFIED="1386880950778" TEXT="gem &apos;jquery-rails&apos;, &apos;3.0.4&apos;"/>
+<node CREATED="1386880950778" ID="ID_190900480" MODIFIED="1386880950778" TEXT="gem &apos;turbolinks&apos;, &apos;1.1.1&apos;"/>
+<node CREATED="1386880950779" ID="ID_1434218707" MODIFIED="1386880950779" TEXT="gem &apos;jbuilder&apos;, &apos;1.0.2&apos;"/>
+<node CREATED="1386880950779" ID="ID_581583538" MODIFIED="1386880950779" TEXT="group :doc do">
+<node CREATED="1386880950780" MODIFIED="1386880950780" TEXT="gem &apos;sdoc&apos;, &apos;0.3.20&apos;, require: false"/>
+</node>
+<node CREATED="1386880950780" ID="ID_1291409516" MODIFIED="1386880950780" TEXT="end"/>
+<node CREATED="1386880950781" ID="ID_524570447" MODIFIED="1386880950781" TEXT="group :production do">
+<node CREATED="1386880950781" MODIFIED="1386880950781" TEXT="gem &apos;pg&apos;, &apos;0.15.1&apos;"/>
+<node CREATED="1386880950782" MODIFIED="1386880950782" TEXT="gem &apos;rails_12factor&apos;, &apos;0.0.2&apos;"/>
+</node>
+<node CREATED="1386880950782" ID="ID_392982565" MODIFIED="1386880950782" TEXT="end"/>
 </node>
 <node CREATED="1386441421658" ID="ID_591664757" MODIFIED="1386441421658" TEXT="Gemfile.lock        A list of gems used to ensure that all copies of the app use the same gem versions"/>
 <node CREATED="1386441421663" ID="ID_1908325607" MODIFIED="1386441421663" TEXT="config.ru        A configuration file for Rack middleware"/>
@@ -117,7 +558,7 @@
 </node>
 </node>
 <node CREATED="1386520232810" ID="ID_384439665" MODIFIED="1386520232810" TEXT="">
-<node CREATED="1386520238286" FOLDED="true" ID="ID_1726609735" MODIFIED="1386703866432" TEXT="rails generate scaffold User name:string email:string">
+<node CREATED="1386520238286" FOLDED="true" ID="ID_1726609735" MODIFIED="1386886313382" TEXT="rails generate scaffold User name:string email:string">
 <node CREATED="1386520368622" ID="ID_1764921321" MODIFIED="1386520368622" TEXT="invoke  active_record"/>
 <node CREATED="1386520368622" ID="ID_1113327716" MODIFIED="1386520368622" TEXT="create    db/migrate/20130305221714_create_users.rb">
 <node CREATED="1386520494091" ID="ID_535326290" MODIFIED="1386520504075" TEXT="bundle exec rake db:migrate">
@@ -133,8 +574,7 @@
       opposite of db:migrate
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
 </node>
 <node CREATED="1386703663691" ID="ID_889663350" MODIFIED="1386703751760" TEXT="rake db:migrate VERSION=0">
@@ -153,8 +593,7 @@
       As you might guess, substituting any other number for 0 migrates to that version number, where the version numbers come from listing the migrations sequentially.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
 </node>
 </node>
@@ -210,7 +649,7 @@
 <node CREATED="1386520368638" ID="ID_459890719" MODIFIED="1386520368638" TEXT="invoke  scss"/>
 <node CREATED="1386520368638" ID="ID_302426189" MODIFIED="1386520368638" TEXT="create    app/assets/stylesheets/scaffolds.css.scss"/>
 </node>
-<node CREATED="1386692083305" FOLDED="true" ID="ID_1642216298" MODIFIED="1386693117510" TEXT="rails generate scaffold Micropost content:string user_id:integer">
+<node CREATED="1386692083305" FOLDED="true" ID="ID_1642216298" MODIFIED="1386884588318" TEXT="rails generate scaffold Micropost content:string user_id:integer">
 <node CREATED="1386692146433" ID="ID_739228392" MODIFIED="1386692146433" TEXT="invoke  active_record"/>
 <node CREATED="1386692146434" ID="ID_241940699" MODIFIED="1386692146434" TEXT="create    db/migrate/20130307005528_create_microposts.rb">
 <node CREATED="1386692206158" ID="ID_342973493" MODIFIED="1386692221048" TEXT="bundle exec rake db:migrate">
@@ -270,7 +709,7 @@
 <node CREATED="1386692146455" ID="ID_1299856869" MODIFIED="1386692146455" TEXT="invoke  scss"/>
 <node CREATED="1386692146456" ID="ID_148967174" MODIFIED="1386692146456" TEXT="identical    app/assets/stylesheets/scaffolds.css.scss"/>
 </node>
-<node CREATED="1386702892056" FOLDED="true" ID="ID_35352623" MODIFIED="1386709270396" TEXT="rails generate controller StaticPages home help --no-test-framework">
+<node CREATED="1386702892056" ID="ID_35352623" MODIFIED="1386884601224" TEXT="rails generate controller StaticPages home help --no-test-framework">
 <richcontent TYPE="NOTE"><html>
   <head>
     
@@ -286,8 +725,7 @@
       <font color="#e60d0d">--no-test-framework to suppress the generation of the default RSpec tests, which we won&#8217;t be using. Instead, we&#8217;ll create the tests by hand </font>
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node CREATED="1386703017195" ID="ID_1456943544" MODIFIED="1386703017195" TEXT="create  app/controllers/static_pages_controller.rb"/>
 <node CREATED="1386703017197" ID="ID_1045253956" MODIFIED="1386703017197" TEXT="route  get &quot;static_pages/help&quot;"/>
 <node CREATED="1386703017198" ID="ID_1147509739" MODIFIED="1386703882412" TEXT="route  get &quot;static_pages/home&quot;">
@@ -300,62 +738,10 @@
       we automatically get a page at the address /static_pages/home
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node CREATED="1386703017199" ID="ID_1244542975" MODIFIED="1386703017199" TEXT="invoke  erb"/>
 <node CREATED="1386703017199" ID="ID_1077939189" MODIFIED="1386703017199" TEXT="create    app/views/static_pages"/>
-<node CREATED="1386707910113" FOLDED="true" ID="ID_741302766" MODIFIED="1386709253940" TEXT="app/views/static_pages/layouts/application.html.erb">
-<richcontent TYPE="NOTE"><html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      &lt;%= stylesheet_link_tag ... %&gt;
-    </p>
-    <p>
-      &lt;%= javascript_include_tag &quot;application&quot;, ... %&gt;
-    </p>
-    <p>
-      &lt;%= csrf_meta_tags %&gt;
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      This code arranges to include the application stylesheet and JavaScript, which are part of the asset pipeline together with the Rails method csrf_meta_tags, which prevents cross-site request forgery (CSRF), a type of malicious web attack.
-    </p>
-  </body>
-</html>
-</richcontent>
-<node CREATED="1386707982579" ID="ID_33077150" MODIFIED="1386707982579" TEXT="&lt;!DOCTYPE html&gt;"/>
-<node CREATED="1386707982783" ID="ID_1864057091" MODIFIED="1386707982783">
-<richcontent TYPE="NODE"><html>
-  
-
-  <head>
-
-  </head>
-  <body>
-  </body>
-</html>
-</richcontent>
-</node>
-<node CREATED="1386707982786" ID="ID_920127613" MODIFIED="1386707982786" TEXT="&lt;head&gt;">
-<node CREATED="1386707982787" MODIFIED="1386707982787" TEXT="&lt;title&gt;Ruby on Rails Tutorial Sample App | &lt;%= yield(:title) %&gt;&lt;/title&gt;"/>
-<node CREATED="1386707982787" MODIFIED="1386707982787" TEXT="&lt;%= stylesheet_link_tag    &quot;application&quot;, media: &quot;all&quot;,">
-<node CREATED="1386707982788" MODIFIED="1386707982788" TEXT="&quot;data-turbolinks-track&quot; =&gt; true %&gt;"/>
-</node>
-<node CREATED="1386707982788" MODIFIED="1386707982788" TEXT="&lt;%= javascript_include_tag &quot;application&quot;, &quot;data-turbolinks-track&quot; =&gt; true %&gt;"/>
-<node CREATED="1386707982789" MODIFIED="1386707982789" TEXT="&lt;%= csrf_meta_tags %&gt;"/>
-</node>
-<node CREATED="1386707982789" ID="ID_1937647396" MODIFIED="1386707982789" TEXT="&lt;/head&gt;"/>
-<node CREATED="1386707982790" ID="ID_1289452456" MODIFIED="1386707982790" TEXT="&lt;body&gt;"/>
-<node CREATED="1386707982790" ID="ID_1930284265" MODIFIED="1386707982790" TEXT="&lt;%= yield %&gt;"/>
-<node CREATED="1386707982791" ID="ID_1537550834" MODIFIED="1386707982791" TEXT="&lt;/body&gt;"/>
-<node CREATED="1386707982791" ID="ID_1786830541" MODIFIED="1386707982791" TEXT="&lt;/html&gt;"/>
-</node>
 <node CREATED="1386703017200" ID="ID_1543061040" MODIFIED="1386703017200" TEXT="create    app/views/static_pages/home.html.erb"/>
 <node CREATED="1386703017200" ID="ID_912680615" MODIFIED="1386703017200" TEXT="create    app/views/static_pages/help.html.erb"/>
 <node CREATED="1386703017201" ID="ID_1210630494" MODIFIED="1386703017201" TEXT="invoke  helper"/>
@@ -376,10 +762,9 @@
       opposite of the generate action
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
-<node CREATED="1386704956311" ID="ID_1500795087" MODIFIED="1386705044925" TEXT="rails generate integration_test static_pages">
+<node CREATED="1386704956311" ID="ID_1500795087" MODIFIED="1386861169908" TEXT="rails generate integration_test static_pages">
 <richcontent TYPE="NOTE"><html>
   <head>
     
@@ -389,9 +774,12 @@
       The first step is to generate an integration test (request spec) for our static pages
     </p>
   </body>
-</html>
-</richcontent>
-<node CREATED="1386705049337" ID="ID_569819445" MODIFIED="1386705049337" TEXT="invoke  rspec"/>
+</html></richcontent>
+<node CREATED="1386705049337" FOLDED="true" ID="ID_569819445" MODIFIED="1386879457968" TEXT="invoke  rspec">
+<node CREATED="1386861183285" ID="ID_410158878" MODIFIED="1386861202949" TEXT="bundle exec rspec filename_path">
+<font BOLD="true" NAME="SansSerif" SIZE="12"/>
+</node>
+</node>
 <node CREATED="1386705049337" ID="ID_1912236709" MODIFIED="1386705049337" TEXT="create    spec/requests/static_pages_spec.rb"/>
 </node>
 </node>
