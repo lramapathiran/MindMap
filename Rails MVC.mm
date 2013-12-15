@@ -1,8 +1,41 @@
 <map version="0.9.0">
 <!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
-<node CREATED="1386409486556" ID="ID_646898767" MODIFIED="1386443587214" TEXT="Rails">
-<node CREATED="1386409502880" ID="ID_1232263473" MODIFIED="1386409511708" POSITION="right" TEXT="rails server"/>
-<node CREATED="1386443601850" ID="ID_1837552191" MODIFIED="1386700177641" POSITION="right">
+<node CREATED="1386409486556" ID="ID_646898767" MODIFIED="1387112206467" TEXT="Rails">
+<node CREATED="1386409502880" ID="ID_1232263473" MODIFIED="1387110696866" POSITION="right" TEXT="rails server">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <ul>
+      <li>
+        As with the console, development is the default environment for the local Rails server, but you can also run it in a different environment:
+      </li>
+    </ul>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<b>$ rails server --environment production</b>
+    </p>
+    <ul>
+      <li>
+        If you view your app running in production, it won&#8217;t work without a production database, which we can create by running rake db:migrate in production:
+      </li>
+    </ul>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<b>$ bundle exec rake db:migrate RAILS_ENV=production </b>
+    </p>
+    <ul>
+      <li>
+        By the way, if you have deployed your sample app to Heroku, you can see its environment using the heroku command, which provides its own (remote) console<b>: </b>
+      </li>
+    </ul>
+    <p>
+      <b>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;$ heroku run console</b>
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node CREATED="1386443601850" ID="ID_1837552191" MODIFIED="1387114868422" POSITION="right">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -24,9 +57,20 @@
   </body>
 </html></richcontent>
 <node CREATED="1386443919234" ID="ID_1843525403" MODIFIED="1386700148546" TEXT="">
-<node CREATED="1386516292878" ID="ID_1407211856" MODIFIED="1386700540464" TEXT="Environnement d&#xe9;veloppement">
-<node CREATED="1386697665687" ID="ID_1093591059" MODIFIED="1386697665687" TEXT="group :development, :test do">
-<node CREATED="1386697665688" ID="ID_928138705" MODIFIED="1386697665688" TEXT="gem &apos;sqlite3&apos;, &apos;1.3.8&apos;"/>
+<node CREATED="1386516292878" FOLDED="true" ID="ID_1407211856" MODIFIED="1387114889926" TEXT="Environnement d&#xe9;veloppement">
+<node CREATED="1386697665687" FOLDED="true" ID="ID_1093591059" MODIFIED="1386954931623" TEXT="group :development, :test do">
+<node CREATED="1386697665688" ID="ID_928138705" MODIFIED="1386954921595" TEXT="gem &apos;sqlite3&apos;, &apos;1.3.8&apos;">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      gem pour la DB en developpement
+    </p>
+  </body>
+</html></richcontent>
+</node>
 <node CREATED="1386697665688" ID="ID_507172604" LINK="https://www.codeschool.com/courses/testing-with-rspec" MODIFIED="1386700605350" TEXT="gem &apos;rspec-rails&apos;, &apos;2.13.1&apos;">
 <richcontent TYPE="NOTE"><html>
   <head>
@@ -71,14 +115,14 @@
 <node CREATED="1386709512085" ID="ID_1833469169" MODIFIED="1386709512085" TEXT="group :development, :test do">
 <node CREATED="1386709512090" ID="ID_1607850569" MODIFIED="1386709512090" TEXT="gem &apos;spork-rails&apos;, &apos;4.0.0&apos;"/>
 <node CREATED="1386709512090" MODIFIED="1386709512090" TEXT="gem &apos;guard-spork&apos;, &apos;1.5.0&apos;"/>
-<node CREATED="1386709512091" MODIFIED="1386709512091" TEXT="gem &apos;childprocess&apos;, &apos;0.3.6&apos;"/>
+<node CREATED="1386709512091" ID="ID_1471715449" MODIFIED="1386709512091" TEXT="gem &apos;childprocess&apos;, &apos;0.3.6&apos;"/>
 </node>
 <node CREATED="1386709512091" ID="ID_256237227" MODIFIED="1386709512091" TEXT="end"/>
 </node>
 </node>
 <node CREATED="1386697665689" ID="ID_1775231307" MODIFIED="1386697665689" TEXT="end"/>
 </node>
-<node CREATED="1386516318771" ID="ID_1188468378" MODIFIED="1386704450632" TEXT="Environnement Test">
+<node CREATED="1386516318771" FOLDED="true" ID="ID_1188468378" MODIFIED="1387114891450" TEXT="Environnement Test">
 <node CREATED="1386704450624" ID="ID_353137501" MODIFIED="1386704590148" TEXT="Integration test">
 <richcontent TYPE="NOTE"><html>
   <head>
@@ -90,7 +134,7 @@
     </p>
   </body>
 </html></richcontent>
-<node CREATED="1386697693444" FOLDED="true" ID="ID_1166955533" MODIFIED="1386704382513" TEXT="group :test do">
+<node CREATED="1386697693444" FOLDED="true" ID="ID_1166955533" MODIFIED="1387114882219" TEXT="group :test do">
 <node CREATED="1386697693445" ID="ID_1368251233" MODIFIED="1386697693445" TEXT="gem &apos;selenium-webdriver&apos;, &apos;2.35.1&apos;"/>
 <node CREATED="1386697693446" ID="ID_1392692201" MODIFIED="1386700202277" TEXT="gem &apos;capybara&apos;, &apos;2.1.0&apos;">
 <richcontent TYPE="NOTE"><html>
@@ -109,9 +153,20 @@
 </node>
 <node CREATED="1386704653226" ID="ID_1023769031" MODIFIED="1386704658235" TEXT="Unit test"/>
 </node>
-<node CREATED="1386516334055" FOLDED="true" ID="ID_1970076553" MODIFIED="1386879511839" TEXT="Environnement production">
-<node CREATED="1386516562020" ID="ID_241475207" MODIFIED="1386516613459" TEXT="group :production do">
-<node CREATED="1386516562021" ID="ID_987988357" MODIFIED="1386516562021" TEXT="gem &apos;pg&apos;, &apos;0.15.1&apos;"/>
+<node CREATED="1386516334055" FOLDED="true" ID="ID_1970076553" MODIFIED="1387114893522" TEXT="Environnement production">
+<node CREATED="1386516562020" FOLDED="true" ID="ID_241475207" MODIFIED="1386955874584" TEXT="group :production do">
+<node CREATED="1386516562021" ID="ID_987988357" MODIFIED="1386954968928" TEXT="gem &apos;pg&apos;, &apos;0.15.1&apos;">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      gem PostgreSQL pour la DB en production
+    </p>
+  </body>
+</html></richcontent>
+</node>
 <node CREATED="1386516562022" ID="ID_1841324455" MODIFIED="1386516562022" TEXT="gem &apos;rails_12factor&apos;, &apos;0.0.2&apos;"/>
 <node CREATED="1386516613459" ID="ID_1805736202" MODIFIED="1386516644646" TEXT="bundle install --without production">
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
@@ -179,7 +234,7 @@
 <node CREATED="1386691944113" ID="ID_98724287" MODIFIED="1386691944113" TEXT="&lt;br /&gt;"/>
 <node CREATED="1386691944114" ID="ID_1911488320" MODIFIED="1386691944114" TEXT="&lt;%= link_to &apos;New User&apos;, new_user_path %&gt;"/>
 </node>
-<node CREATED="1386691454190" FOLDED="true" ID="ID_1498941782" MODIFIED="1386700265522" TEXT="Controller">
+<node CREATED="1386691454190" FOLDED="true" ID="ID_1498941782" MODIFIED="1387114908976" TEXT="Controller">
 <richcontent TYPE="NOTE"><html>
   <head>
     
@@ -200,7 +255,7 @@
 <node CREATED="1386691462396" ID="ID_203934482" MODIFIED="1386691462396" TEXT="end"/>
 </node>
 </node>
-<node CREATED="1386689782205" ID="ID_877985853" MODIFIED="1386704026038" POSITION="right" TEXT="REST(REpresentational State Transfer)">
+<node CREATED="1386689782205" FOLDED="true" ID="ID_877985853" MODIFIED="1387114900393" POSITION="right" TEXT="REST(REpresentational State Transfer)">
 <richcontent TYPE="NOTE"><html>
   <head>
     
@@ -260,6 +315,48 @@
   </body>
 </html></richcontent>
 </node>
+</node>
+<node CREATED="1387112206453" ID="ID_618123011" MODIFIED="1387112219602" POSITION="left" TEXT="rails routes">
+<node CREATED="1386936857843" FOLDED="true" ID="ID_336065707" MODIFIED="1387112809491" TEXT="for Static_Pages">
+<node CREATED="1386936892157" ID="ID_783800115" MODIFIED="1386936892157" TEXT="Page        URL        Named route"/>
+<node CREATED="1386936892158" ID="ID_1414197966" MODIFIED="1386936892158" TEXT="Home        /        root_path"/>
+<node CREATED="1386936892158" ID="ID_779365987" MODIFIED="1386936892158" TEXT="About        /about        about_path"/>
+<node CREATED="1386936892159" ID="ID_1409037819" MODIFIED="1386936892159" TEXT="Help        /help        help_path"/>
+<node CREATED="1386936892160" ID="ID_1415072970" MODIFIED="1386936892160" TEXT="Contact        /contact        contact_path"/>
+<node CREATED="1386936892160" ID="ID_1494215437" MODIFIED="1386936892160" TEXT="Sign up        /signup        signup_path"/>
+<node CREATED="1386936892161" ID="ID_135373329" MODIFIED="1386936892161" TEXT="Sign in        /signin        signin_path"/>
+</node>
+<node CREATED="1387112246203" FOLDED="true" ID="ID_1420034962" LINK="http://ruby.railstutorial.org/chapters/sign-up#table-RESTful_users" MODIFIED="1387112807156" TEXT="for Users">
+<node CREATED="1387112358009" ID="ID_1426032331" MODIFIED="1387112358009" TEXT="HTTP request        URL        Action        Named route        Purpose"/>
+<node CREATED="1387112358009" ID="ID_717184037" MODIFIED="1387112358009" TEXT="GET        /users        index        users_path        page to list all users"/>
+<node CREATED="1387112358010" ID="ID_105362854" MODIFIED="1387112358010" TEXT="GET        /users/1        show        user_path(user)        page to show user"/>
+<node CREATED="1387112358011" ID="ID_1166531388" MODIFIED="1387112358011" TEXT="GET        /users/new        new        new_user_path        page to make a new user (signup)"/>
+<node CREATED="1387112358012" ID="ID_59269439" MODIFIED="1387112358012" TEXT="POST        /users        create        users_path        create a new user"/>
+<node CREATED="1387112358013" ID="ID_589772188" MODIFIED="1387112358013" TEXT="GET        /users/1/edit        edit        edit_user_path(user)        page to edit user with id 1"/>
+<node CREATED="1387112358014" ID="ID_1618016438" MODIFIED="1387112358014" TEXT="PATCH        /users/1        update        user_path(user)        update user"/>
+<node CREATED="1387112358015" ID="ID_719284565" MODIFIED="1387112358015" TEXT="DELETE        /users/1        destroy        user_path(user)        delete user"/>
+</node>
+</node>
+<node CREATED="1387110130888" ID="ID_995903206" MODIFIED="1387110378520" POSITION="left" TEXT="rails  or rails console --sandbox">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <ul>
+      <li>
+        The default environment for the Rails console is development:&#160; <b>$ rails console</b>
+      </li>
+      <li>
+        If you ever need to run a console in a different environment (to debug a test, for example), you can pass the environment as a parameter to the console script:
+      </li>
+    </ul>
+    <p>
+      <b>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;$ rails console test</b>
+    </p>
+  </body>
+</html>
+</richcontent>
 </node>
 </node>
 </map>
